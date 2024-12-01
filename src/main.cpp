@@ -8,6 +8,7 @@ using namespace std;
 std::string read_file_contents(const std::string& filename);
 
 int main(int argc, char *argv[]) {
+    int ret_val = 0;
     // Disable output buffering
     std::cout << std::unitbuf;
     std::cerr << std::unitbuf;
@@ -61,10 +62,12 @@ int main(int argc, char *argv[]) {
                 default:
                     // Ignore other characters for now.
                     std::cerr << "[line " << __LINE__ << "] " << "Error: Unexpected character: " << c << std::endl;
+                    ret_val = 65;
                     break;
             }
         }
-        std::cout << "EOF  null" << std::endl; // Placeholder, remove this line when implementing the scanner 
+        //std::cout << "EOF  null" << std::endl; // Placeholder, remove this line when implementing the scanner 
+        return ret_val;
     } else {
         std::cerr << "Unknown command: " << command << std::endl;
         return 1;
