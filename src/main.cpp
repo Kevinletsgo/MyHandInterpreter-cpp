@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
                     break;
                 default:
                     // Ignore other characters for now.
-                    std::cerr << "[line " << __LINE__ << "] " << "Error: Unexpected character: " << c << std::endl;
+                    std::cerr << "[line " << 1 << "] " << "Error: Unexpected character: " << c << std::endl;
                     ret_val = 65;
                     break;
             }
