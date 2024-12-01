@@ -60,6 +60,7 @@ int main(int argc, char *argv[]) {
                     break;
                 default:
                     // Ignore other characters for now.
+                    std::cerr << "line\t" << __LINE__ << "]\t" << "Error: Unexpected character:\t" << "c" << std::endl;
                     break;
             }
         }
