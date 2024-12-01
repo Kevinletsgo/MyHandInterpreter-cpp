@@ -26,12 +26,41 @@ int main(int argc, char *argv[]) {
         //     std::cerr << "Scanner not implemented" << std::endl;
         //     return 1;
         //}
-        for (auto c: file_contents) {
+        for (const char c: file_contents) {
             switch (c) {
-                case '(': std::cout << "LEFT_PAREN ( null" << std::endl; break;
-                case ')': std::cout << "RIGHT_PAREN ) null" << std::endl; break;
-                case '{': std::cout << "LEFT_BRACE { null" << std::endl; break;
-                case '}': std::cout << "RIGHT_BRACE } null" << std::endl; break;
+                case '(': 
+                    std::cout << "LEFT_PAREN ( null" << std::endl; 
+                    break;
+                case ')': 
+                    std::cout << "RIGHT_PAREN ) null" << std::endl; 
+                    break;
+                case '{':
+                    std::cout << "LEFT_BRACE { null" << std::endl; 
+                    break;
+                case '}': 
+                    std::cout << "RIGHT_BRACE } null" << std::endl; 
+                    break;
+                case ',':
+                    std::cout << "COMMA , null" << std::endl;
+                    break;
+                case '.':
+                    std::cout << "DOT . null" << std::endl;
+                    break;
+                case '-':
+                    std::cout << "MINUS - null" << std::endl;
+                    break;
+                case '+':
+                    std::cout << "PLUS + null" << std::endl;
+                    break;
+                case ';':
+                    std::cout << "SEMICOLON ; null" << std::endl;
+                    break;
+                case '*':
+                    std::cout << "STAR * null" << std::endl;
+                    break;
+                default:
+                    // Ignore other characters for now.
+                    break;
             }
         }
         std::cout << "EOF  null" << std::endl; // Placeholder, remove this line when implementing the scanner 
