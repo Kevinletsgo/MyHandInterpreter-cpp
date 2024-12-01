@@ -30,6 +30,8 @@ int main(int argc, char *argv[]) {
             switch (c) {
                 case '(': std::cout << "LEFT_PAREN ( null" << std::endl; break;
                 case ')': std::cout << "RIGHT_PAREN ) null" << std::endl; break;
+                case '{': std::cout << "LEFT_BRACE { null" << std::endl; break;
+                case '}': std::cout << "RIGHT_BRACE } null" << std::endl; break;
             }
         }
         std::cout << "EOF  null" << std::endl; // Placeholder, remove this line when implementing the scanner 
