@@ -22,10 +22,10 @@ int main(int argc, char *argv[]) {
     if (command == "tokenize") {
         std::string file_contents = read_file_contents(argv[2]);
         
-        if (!file_contents.empty()) {
-            std::cerr << "Scanner not implemented" << std::endl;
-            return 1;
-        }
+        // if (!file_contents.empty()) {
+        //     std::cerr << "Scanner not implemented" << std::endl;
+        //     return 1;
+        //}
         for (auto c: file_contents) {
             switch (c) {
                 case '(': std::cout << "LEFT_PAREN ( null" << std::endl; break;
