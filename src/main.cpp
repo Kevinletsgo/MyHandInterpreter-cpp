@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
                     break;
             }
         }
-        //std::cout << "EOF  null" << std::endl; // Placeholder, remove this line when implementing the scanner 
+        std::cout << "EOF  null" << std::endl; // Placeholder, remove this line when implementing the scanner 
         return ret_val;
     } else {
         std::cerr << "Unknown command: " << command << std::endl;
