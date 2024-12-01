@@ -26,10 +26,12 @@ int main(int argc, char *argv[]) {
             std::cerr << "Scanner not implemented" << std::endl;
             return 1;
         }
-        for(auto c:file_contents) {
-            if(c ='(') cout << "LEFT_PAREN ( null";
-            if(c =')') cout << "LEFT_PAREN ( null";
-        }
+        for (auto c: file_contents) {
+            switch (c) {
+                case '(': std::cout << "LEFT_PAREN ( null" << std::endl; break;
+                case ')': std::cout << "RIGHT_PAREN ) null" << std::endl; break;
+            }
+
         std::cout << "EOF  null" << std::endl; // Placeholder, remove this line when implementing the scanner 
     } else {
         std::cerr << "Unknown command: " << command << std::endl;
