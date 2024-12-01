@@ -4,6 +4,7 @@
 #include <sstream>
 #include <string>
 
+using namespace std;
 std::string read_file_contents(const std::string& filename);
 
 int main(int argc, char *argv[]) {
@@ -24,6 +25,10 @@ int main(int argc, char *argv[]) {
         if (!file_contents.empty()) {
             std::cerr << "Scanner not implemented" << std::endl;
             return 1;
+        }
+        for(auto c:file_contents) {
+            if(c ='(') cout << "LEFT_PAREN ( null";
+            if(c =')') cout << "LEFT_PAREN ( null";
         }
         std::cout << "EOF  null" << std::endl; // Placeholder, remove this line when implementing the scanner 
     } else {
