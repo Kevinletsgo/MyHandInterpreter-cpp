@@ -37,6 +37,7 @@ int main(int argc, char *argv[]) {
                     } else {
                         std::cout << "EQUAL = null" << std::endl;
                     }
+                    break;
                 case '(': 
                     std::cout << "LEFT_PAREN ( null" << std::endl; 
                     break;
