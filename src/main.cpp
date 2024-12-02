@@ -32,10 +32,10 @@ int main(int argc, char *argv[]) {
             switch (c) {
                 case '>':
                     if (i + 1 < file_contents.size() && file_contents[i + 1] == '=') {
-                        std::cout << "LESS_EQUAL >= null" << std::endl;
+                        std::cout << "GREATER_EQUAL >= null" << std::endl;
                         ++i;    
                     } else {
-                        std::cout <<"LESS > null" << std::endl;
+                        std::cout <<"GREATER > null" << std::endl;
                     }                 
                     break;
                 case '<':
