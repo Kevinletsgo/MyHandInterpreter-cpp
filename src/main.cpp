@@ -27,8 +27,16 @@ int main(int argc, char *argv[]) {
         //     std::cerr << "Scanner not implemented" << std::endl;
         //     return 1;
         //}
-        for (const char c: file_contents) {
+        for (size_t i = 0; i < file_contents.size(); ++i) {
+            char c = file_contents[i];
             switch (c) {
+                case '=':
+                    if (i + 1 < file_contents.size() && file_contents[i + 1] == '=') {
+                        std::cout << "EQUAL_EQUAL == null" << std::endl;
+                        ++i; // 跳过下一个字符，因为已经处理了 "=="
+                    } else {
+                        std::cout << "EQUAL = null" << std::endl;
+                    }
                 case '(': 
                     std::cout << "LEFT_PAREN ( null" << std::endl; 
                     break;
