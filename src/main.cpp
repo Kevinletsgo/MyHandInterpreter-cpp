@@ -30,6 +30,12 @@ int main(int argc, char *argv[]) {
         for (size_t i = 0; i < file_contents.size(); ++i) {
             char c = file_contents[i];
             switch (c) {
+                case '/':
+                    if(i + 1 < file_contents.size() && file_contents[i + 1] != '\n') {
+                        continue;
+                    }else {
+                        std::cout << "SLASH / null" << std::endl;
+                    }
                 case '>':
                     if (i + 1 < file_contents.size() && file_contents[i + 1] == '=') {
                         std::cout << "GREATER_EQUAL >= null" << std::endl;
