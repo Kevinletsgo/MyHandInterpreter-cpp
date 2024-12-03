@@ -31,11 +31,9 @@ int main(int argc, char *argv[]) {
         for (size_t i = 0; i < file_contents.size() && !isdoubleSlash; ++i) {
             char c = file_contents[i];
             switch (c) {
-                case '/n':
-                    break;
-                case '/t':
-                    break;
-                case ' ':
+                case ' ': // 忽略空格
+                case '\t': // 忽略Tab
+                case '\n': // 忽略换行
                     break;
                 case '/':
                     if ((i + 1 < file_contents.size() && file_contents[i + 1] != '/') || i + 1 == file_contents.size()) {
