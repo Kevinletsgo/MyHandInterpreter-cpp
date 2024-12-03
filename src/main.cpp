@@ -8,6 +8,7 @@ using namespace std;
 std::string read_file_contents(const std::string& filename);
 
 int main(int argc, char *argv[]) {
+    bool isdoubleSlash = false;
     int ret_val = 0;
     // Disable output buffering
     std::cout << std::unitbuf;
@@ -27,15 +28,16 @@ int main(int argc, char *argv[]) {
         //     std::cerr << "Scanner not implemented" << std::endl;
         //     return 1;
         //}
-        for (size_t i = 0; i < file_contents.size(); ++i) {
+        for (size_t i = 0; i < file_contents.size() && !isdoubleSlash; ++i) {
             char c = file_contents[i];
             switch (c) {
                 case '/':
-                    if(i + 1 < file_contents.size() && file_contents[i + 1] != '\n') {
-                        continue;
-                    }else {
+                    if (i + 1 < file_contents.size() && file_contents[i + 1] != '/') {
                         std::cout << "SLASH / null" << std::endl;
+                    }else{
+                        isdoubleSlash = false;
                     }
+                    break;
                 case '>':
                     if (i + 1 < file_contents.size() && file_contents[i + 1] == '=') {
                         std::cout << "GREATER_EQUAL >= null" << std::endl;
