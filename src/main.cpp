@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
                     if (i + 1 < file_contents.size() && file_contents[i + 1] != '/') {
                         std::cout << "SLASH / null" << std::endl;
                     }else{
-                        isdoubleSlash = false;
+                        isdoubleSlash = true;
                     }
                     break;
                 case '>':
