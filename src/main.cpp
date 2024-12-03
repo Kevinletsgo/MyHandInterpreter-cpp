@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
             char c = file_contents[i];
             switch (c) {
                 case '/':
-                    if (i + 1 < file_contents.size() && file_contents[i + 1] != '/') {
+                    if ((i + 1 < file_contents.size() && file_contents[i + 1] != '/') || i + 1 == file_contents.size()) {
                         std::cout << "SLASH / null" << std::endl;
                     }else{
                         isdoubleSlash = true;
