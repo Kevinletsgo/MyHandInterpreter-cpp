@@ -31,6 +31,8 @@ int main(int argc, char *argv[]) {
         for (size_t i = 0; i < file_contents.size() && !isdoubleSlash; ++i) {
             char c = file_contents[i];
             switch (c) {
+                case '/n':
+                    break;
                 case '/t':
                     break;
                 case ' ':
