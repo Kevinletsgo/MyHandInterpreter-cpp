@@ -31,6 +31,8 @@ int main(int argc, char *argv[]) {
         for (size_t i = 0; i < file_contents.size() && !isdoubleSlash; ++i) {
             char c = file_contents[i];
             switch (c) {
+                case '/n':
+                    break;
                 case '/':
                     if ((i + 1 < file_contents.size() && file_contents[i + 1] != '/') || i + 1 == file_contents.size()) {
                         std::cout << "SLASH / null" << std::endl;
